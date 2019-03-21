@@ -1,0 +1,12 @@
+NAME="Ubuntu"
+VERSION="7.4.1 (Jiangshi)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Drauger OS 7.4.1 Jianghshi"
+VERSION_ID="18.04"
+HOME_URL="https://draugeros.org/go"
+SUPPORT_URL="https://draugeros.org/go/support"
+BUG_REPORT_URL="https://draugeros.org/go/support"
+PRIVACY_POLICY_URL="https://www.draugeros.org/go/privacy/
+VERSION_CODENAME=jiangshi
+UBUNTU_CODENAME=bionic
