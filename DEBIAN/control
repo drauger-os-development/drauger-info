@@ -1,6 +1,6 @@
 Package: drauger-info
-Version: 7.4.1-2.3
-Maintainer: Thomas Castleman <draugeros@gmail.com>
+Version: 7.5.1-1.1
+Maintainer: Thomas Castleman <contact@draugeros.org>
 Section: admin
 Architecture: all
 Priority: required
