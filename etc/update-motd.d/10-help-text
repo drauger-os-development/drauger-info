@@ -6,7 +6,7 @@
 #    Authors: Dustin Kirkland <kirkland@canonical.com>,
 #             Brian Murray <brian@canonical.com>
 #
-#    Modified: Thomas Castleman <contact@draugeros.ml>
+#    Modified: Thomas Castleman <contact@draugeros.org>
 #
 #    This program is free software; you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -23,5 +23,5 @@
 #    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
 printf "\n"
-printf " * Documentation:  https://draugeros.ml/docs\n"
-printf " * Support:        https://draugeros.ml/go/support\n"
+printf " * Documentation:  https://draugeros.org/docs\n"
+printf " * Support:        https://draugeros.org/go/support\n"
