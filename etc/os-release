@@ -7,6 +7,6 @@ VERSION_ID="18.04"
 HOME_URL="https://draugeros.org/go"
 SUPPORT_URL="https://draugeros.org/go/support"
 BUG_REPORT_URL="https://draugeros.org/go/support"
-PRIVACY_POLICY_URL="https://www.draugeros.org/go/privacy/
+PRIVACY_POLICY_URL="https://www.draugeros.org/go/privacy/"
 VERSION_CODENAME=jiangshi
 UBUNTU_CODENAME=bionic

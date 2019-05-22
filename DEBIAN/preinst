@@ -2,6 +2,7 @@
 set -e
 # Automatically added by dh_installdeb/11.1.6ubuntu2
 chattr -i /etc/lsb-release
-chattr -i /etc/os-release || chattr -i /usr/lib/os-release
+chattr -i /etc/os-release
+chattr -i /usr/lib/os-release
 dpkg-maintscript-helper rm_conffile /etc/update-motd.d/50-news 9.6ubuntu11~ -- "$@"
 # End automatically added section
