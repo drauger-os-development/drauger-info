@@ -1,7 +1,7 @@
-NAME="Ubuntu"
+NAME="Drauger OS"
 VERSION="7.5.1 (Zombi)"
-ID=ubuntu
-ID_LIKE=debian
+ID=draugeros
+ID_LIKE=ubuntu
 PRETTY_NAME="Drauger OS 7.5.1 Zombi"
 VERSION_ID="7.5.1"
 HOME_URL="https://draugeros.org/go"
