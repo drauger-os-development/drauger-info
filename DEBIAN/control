@@ -6,7 +6,7 @@ Architecture: all
 Priority: required
 Depends: libc6 (>= 2.3.4)
 Breaks: initscripts (<< 2.88dsf-13.3), sendfile (<< 2.1b.20080616-5.2~)
-Replaces: base, dpkg (<= 1.15.0), miscutils, base-files (>=10.1ubuntu2.4)
+Replaces: base, dpkg (<= 1.15.0), miscutils, base-files
 Provides: base
 Description: Information for Drauger OS
  This package provides information for multiple packages such as dpkg, drauger-welcome, and more. Do not remove.
