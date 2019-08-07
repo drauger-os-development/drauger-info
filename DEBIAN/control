@@ -1,9 +1,11 @@
 Package: base-files
-Version: 2019.7.5.1-1.6
+Version: 2019.7.5.1-1.7
 Maintainer: Thomas Castleman <contact@draugeros.org>
 Section: admin
+Essential: yes
 Architecture: amd64
 Priority: required
+Pre-Depends: awk
 Depends: libc6 (>= 2.3.4), drauger-ppa-enabler
 Breaks: initscripts (<< 2.88dsf-13.3), sendfile (<< 2.1b.20080616-5.2~), drauger-info
 Replaces: base, dpkg (<= 1.15.0), miscutils, drauger-info
