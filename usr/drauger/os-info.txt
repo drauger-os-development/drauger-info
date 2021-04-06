@@ -1,1 +1,1 @@
-7.5.1 "Zombi"
+7.6 "Strigoi"
