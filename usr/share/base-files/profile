@@ -9,7 +9,7 @@ if [ "${PS1-}" ]; then
       . /etc/bash.bashrc
     fi
   else
-    if [ "`id -u`" -eq 0 ]; then
+    if [ "$(id -u)" -eq 0 ]; then
       PS1='# '
     else
       PS1='$ '
