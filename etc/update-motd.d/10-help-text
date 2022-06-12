@@ -24,4 +24,10 @@
 
 printf "\n"
 printf " * Documentation:  https://draugeros.org/docs\n"
+<<<<<<< HEAD
+printf " * Wiki:	   https://draugeros.org/go/wiki\n"
 printf " * Support:        https://draugeros.org/go/support\n"
+printf " * Forums:	   https://draugeros.org/go/community\n"
+=======
+printf " * Support:        https://draugeros.org/go/support\n"
+>>>>>>> master

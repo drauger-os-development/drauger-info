@@ -2,7 +2,7 @@
 # This is a useful way to provide dynamic, informative
 # information pertinent to the users and administrators
 # of the local system
-ENABLED=1
+ENABLED=0
 
 # Configure the source of dynamic MOTD news
 # White space separated list of 0 to many news services

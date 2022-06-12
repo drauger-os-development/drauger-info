@@ -1,21 +1,60 @@
 #!/bin/bash
 VERSION=$(cat DEBIAN/control | grep 'Version: ' | sed 's/Version: //g')
 PAK=$(cat DEBIAN/control | grep 'Package: ' | sed 's/Package: //g')
-mkdir ../"$PAK"_"$VERSION"_all
-cp -R bin ../"$PAK"_"$VERSION"_all/bin
-cp -R etc ../"$PAK"_"$VERSION"_all/etc
-cp -R usr ../"$PAK"_"$VERSION"_all/usr
-cp -R lib ../"$PAK"_"$VERSION"_all/lib
-cp -R dev ../"$PAK"_"$VERSION"_all/dev
-cp -R home ../"$PAK"_"$VERSION"_all/home
-cp -R proc ../"$PAK"_"$VERSION"_all/proc
-cp -R root ../"$PAK"_"$VERSION"_all/root
-cp -R run ../"$PAK"_"$VERSION"_all/run
-cp -R sbin ../"$PAK"_"$VERSION"_all/sbin
-cp -R sys ../"$PAK"_"$VERSION"_all/sys
-cp -R tmp ../"$PAK"_"$VERSION"_all/tmp
-cp -R var ../"$PAK"_"$VERSION"_all/var
-cp -R DEBIAN ../"$PAK"_"$VERSION"_all/DEBIAN
+ARCH=$(cat DEBIAN/control | grep 'Architecture: '| sed 's/Architecture: //g')
+FOLDER="$PAK\_$VERSION\_$ARCH"
+FOLDER=$(echo "$FOLDER" | sed 's/\\//g')
+mkdir ../"$FOLDER"
+##############################################################
+#							     #
+#							     #
+#  COMPILE ANYTHING NECSSARY HERE			     #
+#							     #
+#							     #
+##############################################################
+## Nothing to compile
+##############################################################
+#							     #
+#							     #
+#  REMEMBER TO DELETE SOURCE FILES FROM TMP		     #
+#  FOLDER BEFORE BUILD					     #
+#							     #
+#							     #
+##############################################################
+if [ -d bin ]; then
+	cp -R bin ../"$FOLDER"/bin
+fi
+if [ -d etc ]; then
+	cp -R etc ../"$FOLDER"/etc
+fi
+if [ -d usr ]; then
+	cp -R usr ../"$FOLDER"/usr
+fi
+if [ -d lib ]; then
+	cp -R lib ../"$FOLDER"/lib
+fi
+if [ -d lib32 ]; then
+	cp -R lib32 ../"$FOLDER"/lib32
+fi
+if [ -d lib64 ]; then
+	cp -R lib64 ../"$FOLDER"/lib64
+fi
+if [ -d libx32 ]; then
+	cp -R libx32 ../"$FOLDER"/libx32
+fi
+if [ -d sbin ]; then
+	cp -R sbin ../"$FOLDER"/sbin
+fi
+if [ -d var ]; then
+	cp -R var ../"$FOLDER"/var
+fi
+if [ -d opt ]; then
+	cp -R opt ../"$FOLDER"/opt
+fi
+if [ -d srv ]; then
+	cp -R srv ../"$FOLDER"/srv
+fi
+cp -R DEBIAN ../"$FOLDER"/DEBIAN
 cd ..
-dpkg-deb --build "$PAK"_"$VERSION"_all
-rm -rf "$PAK"_"$VERSION"_all
+dpkg-deb --build "$FOLDER"
+rm -rf "$FOLDER"
