@@ -1,7 +1,12 @@
 #!/bin/bash
 VERSION=$(cat DEBIAN/control | grep 'Version: ' | sed 's/Version: //g')
 PAK=$(cat DEBIAN/control | grep 'Package: ' | sed 's/Package: //g')
-ARCH=$(cat DEBIAN/control | grep 'Architecture: '| sed 's/Architecture: //g')
+ARCH="$1"
+if [ "$ARCH" == "" ] || [ "$ARCH" == "amd64" ] || [ "$ARCH" == "AMD64" ] || [ "$ARCH" == "AMD" ] || [ "$ARCH" == "amd" ] || [ "$ARCH" == "x86_64" ] || [ "$ARCH" == "x86" ] || [ "$ARCH" == "x64" ]; then
+	ARCH="amd64"
+elif [ "$ARCH" == "ARM" ] || [ "$ARCH" == "arm" ] || [ "$ARCH" == "ARM64" ] || [ "$ARCH" == "arm64" ]; then
+	ARCH="arm64"
+fi 
 FOLDER="$PAK\_$VERSION\_$ARCH"
 FOLDER=$(echo "$FOLDER" | sed 's/\\//g')
 mkdir ../"$FOLDER"
@@ -51,10 +56,13 @@ fi
 if [ -d opt ]; then
 	cp -R opt ../"$FOLDER"/opt
 fi
-if [ -d srv ]; then
-	cp -R srv ../"$FOLDER"/srv
-fi
 cp -R DEBIAN ../"$FOLDER"/DEBIAN
 cd ..
+# Remove and edit files
+sed -i "s/<arch>/$ARCH/g" "$FOLDER"/DEBIAN/control
+keep="locale-check-$ARCH"
+mv "$FOLDER"/usr/bin/"$keep" "$FOLDER"/usr/bin/locale-check
+rm "$FOLDER"/usr/bin/locale-check-*
+# done
 dpkg-deb --build "$FOLDER"
 rm -rf "$FOLDER"
