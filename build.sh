@@ -6,7 +6,7 @@ if [ "$ARCH" == "" ] || [ "$ARCH" == "amd64" ] || [ "$ARCH" == "AMD64" ] || [ "$
 	ARCH="amd64"
 elif [ "$ARCH" == "ARM" ] || [ "$ARCH" == "arm" ] || [ "$ARCH" == "ARM64" ] || [ "$ARCH" == "arm64" ]; then
 	ARCH="arm64"
-fi 
+fi
 FOLDER="$PAK\_$VERSION\_$ARCH"
 FOLDER=$(echo "$FOLDER" | sed 's/\\//g')
 mkdir ../"$FOLDER"
@@ -17,7 +17,7 @@ mkdir ../"$FOLDER"
 #							     #
 #							     #
 ##############################################################
-## Nothing to compile
+echo "Building for $ARCH"
 ##############################################################
 #							     #
 #							     #
