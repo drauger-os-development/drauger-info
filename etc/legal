@@ -1,14 +1,8 @@
 
-Drauger OS is based off Ubuntu. The programs that come with it
-are subject to the same terms as the programs which come with Ubuntu.
-
-The source code for apps made in-house for Drauger OS can be found
-at https://github.com/drauger-os-development.
-
-The programs included with the Ubuntu system are free software;
+The programs included with the Drauger OS system are free software;
 the exact distribution terms for each program are described in the
 individual files in /usr/share/doc/*/copyright.
 
-Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+Drauger OS comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
 applicable law.
 
