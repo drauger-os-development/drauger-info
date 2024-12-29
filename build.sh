@@ -57,6 +57,7 @@ if [ -d opt ]; then
 	cp -R opt ../"$FOLDER"/opt
 fi
 cp -R DEBIAN ../"$FOLDER"/DEBIAN
+BASE="$PWD"
 cd ..
 # Remove and edit files
 sed -i "s/<arch>/$ARCH/g" "$FOLDER"/DEBIAN/control
@@ -66,3 +67,8 @@ rm "$FOLDER"/usr/bin/locale-check-*
 # done
 dpkg-deb --build "$FOLDER"
 rm -rf "$FOLDER"
+cd "$BASE"
+if [ ! -d build ]; then
+	mkdir -v build
+fi
+mv ../"$FOLDER".deb build/"$FOLDER".deb

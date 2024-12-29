@@ -23,11 +23,5 @@
 #    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
 printf "\n"
-printf " * Documentation:  https://draugeros.org/docs\n"
-<<<<<<< HEAD
-printf " * Wiki:	   https://draugeros.org/go/wiki\n"
-printf " * Support:        https://draugeros.org/go/support\n"
-printf " * Forums:	   https://draugeros.org/go/community\n"
-=======
-printf " * Support:        https://draugeros.org/go/support\n"
->>>>>>> master
+printf " * Wiki:         https://draugeros.org/wiki\n"
+printf " * Contact Us:   https://draugeros.org/contact-us\n"
