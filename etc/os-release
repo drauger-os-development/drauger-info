@@ -1,11 +1,11 @@
 NAME="Drauger OS"
-VERSION="7.7 (Nzambi)"
+VERSION="7.8 (Urgal)"
 ID=DraugerOS
 ID_LIKE=ubuntu
-PRETTY_NAME="Drauger OS 7.7 Nzambi"
-VERSION_ID="7.7"
+PRETTY_NAME="Drauger OS 7.8 Urgal"
+VERSION_ID="7.8"
 HOME_URL="https://draugeros.org"
 SUPPORT_URL="https://draugeros.org/support"
 PRIVACY_POLICY_URL="https://www.draugeros.org/privacy/"
-VERSION_CODENAME=nzambi
-UBUNTU_CODENAME=noble
+VERSION_CODENAME=urgal
+UBUNTU_CODENAME=questing
