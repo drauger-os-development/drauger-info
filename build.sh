@@ -64,6 +64,12 @@ sed -i "s/<arch>/$ARCH/g" "$FOLDER"/DEBIAN/control
 keep="locale-check-$ARCH"
 mv "$FOLDER"/usr/bin/"$keep" "$FOLDER"/usr/bin/locale-check
 rm "$FOLDER"/usr/bin/locale-check-*
+
+# Make sure we have all needed folders
+cd "$FOLDER"
+mkdir -p var/spool
+mkdir -p tmp sys run root proc dev
+
 # done
 dpkg-deb --build "$FOLDER"
 rm -rf "$FOLDER"
