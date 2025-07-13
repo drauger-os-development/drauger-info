@@ -69,6 +69,7 @@ rm "$FOLDER"/usr/bin/locale-check-*
 cd "$FOLDER"
 mkdir -p var/spool
 mkdir -p tmp sys run root proc dev
+cd ..
 
 # done
 dpkg-deb --build "$FOLDER"
