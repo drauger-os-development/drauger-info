@@ -67,8 +67,20 @@ rm "$FOLDER"/usr/bin/locale-check-*
 
 # Make sure we have all needed folders
 cd "$FOLDER"
-mkdir -p var/spool var/tmp 
-mkdir -p tmp sys run root proc dev
+mkdir -p var/spool var/tmp
+mkdir -p tmp sys run root proc dev home media mnt opt srv
+if [ ! -d bin ]; then
+	ln -s usr/bin bin
+fi
+if [ ! -d lib ]; then
+	ln -s usr/lib lib
+fi
+if [ ! -d lib64 ]; then
+	ln -s usr/lib64 lib64
+fi
+if [ ! -d sbin ]; then
+	ln -s usr/sbin sbin
+fi
 cd ..
 
 # done
