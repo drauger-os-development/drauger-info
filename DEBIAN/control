@@ -1,12 +1,12 @@
 Package: base-files
-Version: 2025.07.13-1
+Version: 2025.08.01
 Maintainer: Thomas Castleman <batcastle@draugeros.org>
 Section: admin
 Essential: yes
 Architecture: <arch>
 Priority: required
 Pre-Depends: awk
-Depends: libc6 (>= 2.3.4), libcrypt1 (>= 1:4.4.10-10ubuntu3), drauger-ppa-enabler, systemd, systemd-resolved
+Depends: libc6 (>= 2.3.4), libcrypt1 (>= 1:4.4.10-10ubuntu3), drauger-ppa-enabler, systemd, systemd-resolved, network-manager
 Breaks: debian-security-support (<< 2019.04.25), initscripts (<< 2.88dsf-13.3), sendfile (<< 2.1b.20080616-5.2~), drauger-info
 Replaces: base, dpkg (<= 1.15.0), miscutils, drauger-info
 Provides: base
